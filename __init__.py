@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Atajos Útiles",
     "author": "Norte",
-    "version": (3, 0),
+    "version": (3, 1),
     "blender": (3, 4, 0),
     "location": "Menu Vertical",
     "description": "Herramientas de materiales, UVs, atajos de transformación y texturas WMO",
@@ -24,6 +24,19 @@ addon_keymaps = []
 # =====================================================
 
 def get_desktop():
+    if os.name == 'nt':  # Windows
+        try:
+            import winreg
+            key = winreg.OpenKey(
+                winreg.HKEY_CURRENT_USER,
+                r"Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders"
+            )
+            desktop, _ = winreg.QueryValueEx(key, "Desktop")
+            winreg.CloseKey(key)
+            return desktop
+        except Exception:
+            pass
+    # Fallback para Mac/Linux (o si falla el registro)
     return os.path.join(os.path.expanduser("~"), "Desktop")
 
 def get_db_path():
