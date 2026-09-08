@@ -1,7 +1,6 @@
 {
     "CUSTOM": {
-        "ejemplo": "ejemplo/ejemplo.blp"
-  
+        "test": "test/test.blp"
     },
     "GENERAL": [
         "dungeons/textures/6du_hellfireraid/6du_hfcitadelfloor1.blp",
@@ -323,6 +322,9 @@
         "tileset/expansion07/warfronts/8war_rock01_512.blp",
         "dungeons/textures/7sr_suramar_city/7ne_sr_tilefloorcircle.blp",
         "dungeons/textures/pandaren/mogu/jlo_mogu_wall_plainstonel.blp",
-        "tileset/expansion07/kultiraszone/8kul_snow03_512.blp"
+        "tileset/expansion07/kultiraszone/8kul_snow03_512.blp",
+        "dungeons/textures/8hu_kultiras/8hu_kultiras_wallwood01.blp",
+        "dungeons/textures/6hu_garrison/6hu_garrison_barn_wood_02.blp",
+        "dungeons/textures/6hu_garrison/6hu_garrison_wood_barracks.blp"
     ]
 }
